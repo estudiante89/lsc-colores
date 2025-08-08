@@ -3,12 +3,13 @@ flask-socketio
 numpy
 opencv-python
 tensorflow
-mediapipe==0.10.3
+mediapipe>=0.10.3,<0.11
 joblib
 scikit-learn
 tensorflow==2.18.0
 tensorflow-estimator==2.13.0
 
  
+
 
 
