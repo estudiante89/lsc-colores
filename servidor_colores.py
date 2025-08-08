@@ -16,8 +16,8 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 # === Modelo y etiquetas ===
-model = TFSMLayer("modelos/colores/modelo_lsc_savedmodel/", call_endpoint="serving_default")
-with open("modelos/colores/label_encoder_colores.pkl", "rb") as f:
+model = TFSMLayer("colores/modelo_lsc_savedmodel/saved_model.pb", call_endpoint="serving_default")
+with open("colores/label_encoder_colores.pkl", "rb") as f:
     le = pickle.load(f)
 
 # === MediaPipe inicialización global ===
@@ -150,5 +150,6 @@ def index():
 if __name__ == '__main__':
     threading.Thread(target=reiniciar_letras_cada_15s, daemon=True).start()
     socketio.run(app, host='0.0.0.0', port=5002)
+
 
 
