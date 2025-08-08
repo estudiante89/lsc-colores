@@ -1,9 +1,4 @@
 python-3.11.9
 
-intentar en replit cada uno
-como un servidor web independiente 
 
-continuar en el chatgpt en railway
-
-y tmbine fly.io
 
