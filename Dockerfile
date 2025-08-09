@@ -26,7 +26,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponer el puerto (ajusta si es diferente)
-EXPOSE 5002
+EXPOSE $PORT
 
 # Comando para iniciar tu servidor
 CMD ["python", "servidor_colores.py"]
+
