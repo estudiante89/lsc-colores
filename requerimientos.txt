@@ -6,11 +6,12 @@ opencv-python
 tensorflow
 mediapipe>=0.10.3,<0.11
 joblib
-scikit-learn
+scikit-learn==1.7.0
 tensorflow==2.18.0
 tensorflow-estimator==2.13.0
 
  
+
 
 
 
