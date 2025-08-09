@@ -1,6 +1,7 @@
+import eventlet
+eventlet.monkey_patch()
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO, emit
 import cv2
@@ -11,8 +12,8 @@ import mediapipe as mp
 import pickle
 import threading
 import time
-import eventlet
-eventlet.monkey_patch()
+
+
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
@@ -152,6 +153,7 @@ def index():
 if __name__ == '__main__':
     threading.Thread(target=reiniciar_letras_cada_15s, daemon=True).start()
     socketio.run(app, host='0.0.0.0', port=5002)
+
 
 
 
