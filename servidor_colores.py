@@ -152,7 +152,10 @@ def index():
 # === Iniciar servidor ===
 if __name__ == '__main__':
     threading.Thread(target=reiniciar_letras_cada_15s, daemon=True).start()
-    socketio.run(app, host='0.0.0.0', port=5002)
+    port = int(os.environ.get("PORT", 5002))  # Render define PORT
+    socketio.run(app, host='0.0.0.0', port=port)
+  
+
 
 
 
